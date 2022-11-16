@@ -34,8 +34,8 @@ $(function () {
   // 削除処理
   $("#clear").on("click", function () {
     localStorage.clear();
-    location.reload();
     showList();
+    location.reload();
   });
 
   // 保存処理
