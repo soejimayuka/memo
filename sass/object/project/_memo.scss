@@ -47,6 +47,9 @@ li {
   @include mq(lg) {
     width: 160px;
   }
+  @include mq(xl) {
+    width: 210px;
+  }
 }
 
 .l-box.-bi {
