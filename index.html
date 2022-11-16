@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="../js/app.js" defer=""></script>
+
+    <title>FAMILY SCHEDULE</title>
+  </head>
+  <body>
+    <!-- 新規登録ボタン -->
+    <section>
+      <div class="l-shinkbtn">
+        <button type="button" id="openModal" class="c-button -touroku">新規登録</button>
+        <button type="button" id="clear" class="c-button -sakuzyo">全ての予定を削除</button>
+      </div>
+    </section>
+    <!-- モーダルエリアここから -->
+    <section id="modalArea" class="modalArea">
+      <div id="modalBg" class="modalBg"></div>
+      <div class="modalWrapper">
+        <div class="modalContents">
+          <div class="l-input__wrapper">
+            <div class="l-input__area">
+              <div class="selectdiv">
+                <p class="p-input__title">FAMILY</p>
+                <select class="l-input__box" name="example" 　id="scheduleWho">
+                  <option>名前を選択</option>
+                  <option value="papa">PAPA</option>
+                  <option value="mama">MAMA</option>
+                  <option value="nanami">NANAMI</option>
+                  <option value="shiho">SHIHO</option>
+                  <option value="kaho">KAHO</option>
+                  <option value="yuno">YUNO</option>
+                  <option value="ayu">AYU</option>
+                </select>
+              </div>
+              <p class="p-input__title">DATE</p>
+              <input class="l-input__box" type="date" name="date" id="scheduleBi" />
+              <p class="p-input__title">TIME</p>
+              <input
+                class="l-input__box"
+                type="time"
+                name="example1"
+                id="scheduleTime"
+                list="data-list"
+                　step="1800"
+              /><span></span>
+              <datalist id="data-list">
+                <option value="05:00"></option>
+                <option value="05:30"></option>
+                <option value="06:00"></option>
+                <option value="06:30"></option>
+                <option value="07:00"></option>
+                <option value="07:30"></option>
+                <option value="08:00"></option>
+                <option value="08:30"></option>
+                <option value="09:00"></option>
+                <option value="09:30"></option>
+                <option value="10:00"></option>
+                <option value="10:30"></option>
+                <option value="11:00"></option>
+                <option value="11:30"></option>
+                <option value="12:00"></option>
+                <option value="12:30"></option>
+                <option value="13:00"></option>
+                <option value="13:30"></option>
+                <option value="14:00"></option>
+                <option value="14:30"></option>
+                <option value="15:00"></option>
+                <option value="15:30"></option>
+                <option value="16:00"></option>
+                <option value="16:30"></option>
+                <option value="17:00"></option>
+                <option value="17:30"></option>
+                <option value="18:00"></option>
+                <option value="18:30"></option>
+                <option value="19:00"></option>
+                <option value="19:30"></option>
+                <option value="20:00"></option>
+                <option value="20:30"></option>
+                <option value="21:00"></option>
+                <option value="22:30"></option>
+                <option value="23:00"></option>
+                <option value="23:30"></option>
+              </datalist>
+              <p class="p-input__title">SCHEDULE</p>
+              <input class="l-input__box" type="text" id="scheduleTitle" />
+            </div>
+            <div>
+              <button type="button" id="save" class="c-button -hozon">保存</button>
+            </div>
+          </div>
+        </div>
+        <div id="closeModal" class="closeModal">閉じる</div>
+      </div>
+    </section>
+    <section>
+      <div class="l-scroll">
+        <!-- 1段目 /> -->
+        <div class="l-wrapper -title">
+          <div class="l-box -who"></div>
+          <div class="l-box -who"><p>papa</p></div>
+          <div class="l-box -who"><p>mama</p></div>
+          <div class="l-box -who"><p>nanami</p></div>
+          <div class="l-box -who"><p>shiho</p></div>
+          <div class="l-box -who"><p>kaho</p></div>
+          <div class="l-box -who"><p>yuno</p></div>
+          <div class="l-box -who"><p>ayu</p></div>
+        </div>
+        <!-- 3段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="firstday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-firstday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-firstday"></div></div>
+        </div>
+        <!-- 4段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="secondday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-secondday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-secondday"></div></div>
+        </div>
+        <!-- 5段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="thirdday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-thirdday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-thirdday"></div></div>
+        </div>
+        <!-- 6段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="fourthdday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-fourthdday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-fourthdday"></div></div>
+        </div>
+        <!-- 7段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="fifthdday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-fifthdday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-fifthdday"></div></div>
+        </div>
+        <!-- 8段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="sixthdday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-sixthdday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-sixthdday"></div></div>
+        </div>
+        <!-- 9段目 /> -->
+        <div class="l-wrapper -schedule">
+          <div id="seventhdday" class="l-box -bi"></div>
+          <div class="l-box"><div id="papa-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="mama-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="nanami-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="shiho-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="kaho-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="yuno-hyouzi-seventhdday"></div></div>
+          <div class="l-box"><div id="ayu-hyouzi-seventhdday"></div></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

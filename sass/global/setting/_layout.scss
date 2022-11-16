@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+//============================================
+//  Layout Settings
+//============================================
+
+// Contentの幅
+$content-width: 960 !default;
+
+// デザインカンプのアートボードサイズ
+$sp-comp-width: 375px;
+$md-comp-width: 768px;
+$lg-comp-width: 1440px;
+
+// ブレークポイント
+$breakpoints: (
+  min: 0,
+  xxs: 375px,
+  xs: 414px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1480px,
+) !default;
+
+// 余白
+$spaces: (
+  min: 8,
+  xxsmall: 16,
+  xsmall: 24,
+  small: 40,
+  medium: 64,
+  large: 88,
+  xlarge: 96,
+  xxlarge: 112,
+  max: 120,
+) !default;
+
+// Grid Column
+$column: 12;
+
+// スクロールバー
+$scroll-bar: 0;
+
+// プレフィックス
+$prefix: "d";
+
+//====================================
+//  Color Setings
+//====================================
+
+// ベースカラー
+$base-color: #fff;
+
+// メインカラー
+$main-color: #212121;
+
+// サブカラー
+$sub-color: #f8f8f8;
+
+// テキストの色
+$primary-text-color: #212121;

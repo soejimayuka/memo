@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+
+/*
+  Textalign
+*/
+.u-center {
+  text-align: center;
+}
+.u-left {
+  text-align: left;
+}
+.u-right {
+  text-align: right;
+}
+
+.br-sp {
+  display: block;
+  @include mq(lg) {
+    display: none;
+  }
+}
