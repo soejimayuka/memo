@@ -53,6 +53,7 @@ $(function () {
       zikan: zikan,
     };
     storage.setItem(localStorage.length.toString(), JSON.stringify(hairetu));
+    location.reload();
   });
   showList();
 });
